@@ -3,8 +3,10 @@
     padding-left: 65%;
     padding-top: 4%;
 }
+
 body{
     overflow-x: hidden;
+    background-color: black;
 }
 
 .sin-decoracion:hover{
@@ -226,6 +228,9 @@ box-sizing: border-box;
 }
 .logo-container{
     display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 .contenedor-botones > button{
     margin: 10px;
@@ -286,3 +291,28 @@ box-sizing: border-box;
     box-shadow: 0px 0px 13px 2px rgba(139,115,225,0.49);
 }
 
+footer{
+    clear: both;
+    position: relative;
+    height: 200px;
+    margin-top: 30px;
+    background-color: black;
+}
+.descripcion-text p{
+    font-family: sans-serif;
+    font-size: 19px;
+    text-align: center;
+    font-weight: 400;
+    color: #26292d;
+}
+.contenedor-footer-logo{
+    width: 100%;
+    background-color: #e2c817;
+}
+
+.icons-footer svg{
+    margin-left: 10px;
+}
+.direccion-footer{
+    text-align: center;
+}
