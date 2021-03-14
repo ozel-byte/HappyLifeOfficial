@@ -13,8 +13,8 @@ class NavagationBar extends React.Component{
                     </div>
                     <nav>
                         <ul className="nav-items">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Acerca de Nosotros</a></li>
+                            <li><a href="/home">Home</a></li>
+                            <li><a href="/aboutUs">Acerca de Nosotros</a></li>
                             <li><a href="#">Equipo</a></li>
                             <li><a href="#">Servicio</a></li>
                         </ul>

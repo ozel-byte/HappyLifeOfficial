@@ -2,7 +2,6 @@ import React from "react";
 import {BrowserRouter as Router, Route} from "react-router-dom"
 import SignUp from "./SignUp";
 import SignIn from "./SignIn";
-import Home from "./Home";
 import Dashboard from "./dashboard";
 import BaulRecuerdos from "./BaulRecuerdos";
 import AboutUs from "./AboutUs";
