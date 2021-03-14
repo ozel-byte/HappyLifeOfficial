@@ -1,52 +1,52 @@
 import React from "react";
+import NavagationBar from "../componenentes/NavagationBar";
+import Footer from "../componenentes/Footer";
 
 class AboutUs extends React.Component{
     render() {
         return (
-            <div>
-                <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                    <div className="container-fluid">
-                        <div>
-                            <a className="navbar-brand" href="#"><img src="../imgs/IMG_20210201_170350.png" alt="" width="40px" height="40px"/>HappyLife</a>
-                        </div>
-                        <div className="collapse navbar-collapse" id="navbarNav">
-                            <ul className="navbar-nav">
-                                <li className="nav-item">
-                                    <a className="nav-link" aria-current="page" href="/home">Home</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link active" aria-current="page" href="/aboutUs">Acerca de nosotros</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="d-flex justify-content-end align-items-center divButton">
-                            <button type="button" className="btn btn-light divButton">sign in</button>
-                            <button type="button" className="btn btn-success">Registrarse</button>
-                        </div>
+            <>
+                <NavagationBar/>
+                <div className="text-danger textP">
+                    <h3 className="txtQuienesSomos">¿Quienes somos?<br/></h3>
+                </div>
+                <div className="textP animate__animated animate__fadeInRight">
+                    <br/>
+                    <br/>
+                    <h1>Somos una <span className="text-info">plataforma</span></h1>
+                    <h1>que funciona como auxiliar en el</h1>
+                    <h1>tratamiento <span className="txtTrastornos">transtornos</span></h1>
+                    <h1 className="txtTrastornos">mentales.</h1>
+                    <br/>
+                    <h4 className="txtEspecializados">Especilizados en la ansiedad y drepresion</h4>
+                </div>
+                <div className="imagen1 ">
+                    <img src="../imgs/aboutUs1.jpeg"/>
+                </div>
+                <br/>
+                <br/>
+
+                <div>
+                    <div className="textS animate__animated animate__fadeInLeft">
+                        <h1>Nos centramos en <span className="textoFomentar">fomentar</span></h1>
+                        <h1>buenos <span className="text-info">hábitos</span> en en las personas.</h1>
+                        <br/>
+                        <br/>
+                        <h4>Los cuales aumentan la seguridad en uno</h4>
+                        <h4>mismo, gracias al aumento del autoestima </h4>
+                        <br/>
+                        <br/>
+                        <h1><span className="text-info">Cualidades</span> que fortalcen</h1>
+                        <h1>Nuestra capacidad de interactuar</h1>
+                        <h1>con las <span className="txtEspecializados">personas</span> de forma real</h1>
                     </div>
-                </nav>
-                <div className="text-warning quienesSomos">
-                    <h3>¿Quienes somos?</h3>
+                    <div className="imagen2">
+                        <img src="../imgs/aboutUs2.jpeg"/>
+                    </div>
                 </div>
-                <div className="text-dark textP">
-                    <h1>Somos una <span className="text-success">plataforma</span></h1>
-                    <h1>que funciona como un</h1>
-                    <h1>auxiliar en el tratamiento</h1>
-                    <h1>de <span className="text-danger">enfermedades</span>.</h1>
-                </div>
-                <div className="imagen1">
-                    <img src="../imgs/PicsArt_03-07-09.46.28.png" width="242px" height="242px"/>
-                </div>
-                <div className="imagen2">
-                    <img src="../imgs/PicsArt_03-07-09.27.12.png" width="400px" height="400px"/>
-                </div>
-                <div className="imagen3">
-                    <img src="../imgs/PicsArt_03-07-11.17.40.png" width="257px" height="415px"/>
-                </div>
-                <div className="textoM">
-                    <h3>trastornos de ansiedad y depresión</h3>
-                </div>
-            </div>
+
+                <Footer/>
+            </>
         )
     }
 }
