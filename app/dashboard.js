@@ -15,7 +15,7 @@ class Dashboard extends React.Component{
                 <NavBarDashboard/>
                <div className="contenedor-publicacion">
                   <h1>Rincon de la Felicidad</h1>
-                   <label className="form-label text-muted">Anote todas las cosas que lo hicieron feliz</label>
+                   <label className="form-label text-muted">Anote todas las cosas que te hacen feliz</label>
                    <textarea className="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
                    <br/>
                    <button className="btn btn-outline-success">Agregar</button>

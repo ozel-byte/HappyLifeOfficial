@@ -6,6 +6,7 @@ import Dashboard from "./dashboard";
 import BaulRecuerdos from "./BaulRecuerdos";
 import AboutUs from "./AboutUs";
 import NavBar from "../componenentes/NavBar";
+import DiarioEmocional from "./DiarioEmocional";
 
 
 function App() {
@@ -28,6 +29,9 @@ function App() {
             </Route>
             <Route path="/aboutUs">
                 <AboutUs/>
+            </Route>
+            <Route exact path="/DiarioEmocional">
+                <DiarioEmocional/>
             </Route>
         </Router>
     )

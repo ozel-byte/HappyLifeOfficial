@@ -19,7 +19,7 @@ class NavBarDashboard extends React.Component{
                                     <a className="nav-link" href="/BaulRecuerdos">Baul de los Recuerdos</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">Diario Emocional</a>
+                                    <a className="nav-link" href="/DiarioEmocional">Diario Emocional</a>
                                 </li>
 
                             </ul>
