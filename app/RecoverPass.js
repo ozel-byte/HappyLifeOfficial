@@ -11,18 +11,26 @@ class RecuperarPass extends React.Component{
         }
     }
 
+    componentDidMount() {
+        if (window.localStorage.getItem("token")){
+            this.props.history.push("/dashboard");
+        }
+    }
+
     viewUser(){
 
        if(this.props.email.length>0 && this.props.password.length>0){
-
            axios.post('http://localhost:3000/user/signin',{
                          //http://localhost:3000/user/signin
                correo: this.props.email,
                pass: this.props.password
            }).then(dataRes => {
-               console.log(dataRes.data.body);
+               console.log(dataRes.data.body[0].idUsuario);
                console.log(dataRes.data);
+               console.log(dataRes.data.token);
                if (dataRes.data.status === true){
+                   window.localStorage.setItem('token',dataRes.data.token);
+                   window.localStorage.setItem('user',dataRes.data.body[0].idUsuario);
                    this.props.history.push('/dashboard');
                    alert(dataRes.data);
                }else{

@@ -1,35 +1,76 @@
 import React from 'react';
+import NavBarDashboard from "../componenentes/NavBarDashboard";
+import axios from "axios";
+
 class BaulRecuerdos extends React.Component{
+
+    constructor() {
+        super();
+        this.state={
+           baul: ["universidad", "cine"]
+        }
+    }
+
+    componentDidMount() {
+        //this.obtenerBaules()
+    }
+
+    obtenerBaules(){
+        let idUsuario = window.localStorage.getItem("user");
+        console.log(idUsuario + " recuerdo");
+        axios.get('http://localhost:3000/actividades/getBaul', {
+            data: {
+                idUsuario: idUsuario
+            }
+
+        }).then(data => {
+            this.setState({
+                baul: data.data.body
+            })
+        });
+    }
+
     render() {
         return (
             <div>
-                <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                    <div className="container-fluid">
-                        <div>
-
-                            <a className="navbar-brand" href="#"><img src="../imgs/IMG_20210201_170350.png" alt="" width="40px" height="40px"/>HappyLife</a>
-                        </div>
-                        <div className="collapse navbar-collapse" id="navbarNav">
-                            <ul className="navbar-nav nav-customer">
-                                <li className="nav-item">
-                                    <a className="nav-link" aria-current="page" href="/dashboard">Rincon de la felicidad</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="/BaulRecuerdos">Baul de los Recuerdos</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="#">Diario Emocional</a>
-                                </li>
-
-                            </ul>
-
-                        </div>
-                        <div className="d-flex justify-content-end align-items-center divButton">
-                            <h5>Ozel^</h5>
-                        </div>
-                    </div>
-                </nav>
+                <NavBarDashboard/>
+                <div className="contenedor-publicacion2">
+                    <h1>Baúl de los recuerdos</h1>
+                    <label>Ponle un Titulo a tu recuerdo :)</label>
+                    <textarea className="form-control" id="exampleFormControlTextarea1" rows="1">Universidad</textarea>
+                    <label> Escriba un recuerdo que lo haga sentir feliz :)</label>
+                    <textarea className="form-control" id="exampleFormControlTextarea1" rows="4"> Un día estaba en la universidad y me dijeron que tendría hora libre... </textarea>
+                    <label>¿Porque ese recuerdo te hace feliz?</label>
+                    <textarea className="form-control" id="exampleFormControlTextarea1" rows="4"> Porque asi podria ir a comer :)</textarea>
+                    <br/>
+                    <button className="btn btn-outline-success">Agregar</button>
+                </div>
+                <label className="d-flex justify-content-center"><h2>Mis recuerdos</h2></label>
+                <div className="contenedor-item-publicacion">
+                    {
+                        this.state.baul.map(item =>{
+                            return <div className="accordion" id="accordionRecuerdos">
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header" id="heading">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target={"#"+ item} aria-expanded="false" aria-controls="collapse">
+                                            prueba
+                                        </button>
+                                    </h2>
+                                    <div id={item} className="accordion-collapse collapse" aria-labelledby="heading"
+                                         data-bs-parent="#accordionRecuerdos">
+                                        <div className="accordion-body">
+                                            {"# "+ item}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        })
+                    }
+                </div>
+                <br/>
             </div>
+
         );
     }
 }

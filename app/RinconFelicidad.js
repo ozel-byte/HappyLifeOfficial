@@ -34,3 +34,5 @@ class RinconFelicidad extends React.Component{
         );
     }
 }
+
+export default RinconFelicidad;

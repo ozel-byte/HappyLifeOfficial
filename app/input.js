@@ -11,7 +11,7 @@ import React from "react";
     render() {
 
         return (
-            <div>
+            <div className>
                 <form>
                     <label className="form-label">{this.props.label}</label>
                     <br/>

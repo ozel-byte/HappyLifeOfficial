@@ -1,27 +1,31 @@
 import React from 'react';
-import Footer from "./Footer";
-
-
+import { withRouter } from 'react-router-dom';
+import Logo from "./Logo";
 class NavagationBar extends React.Component{
+
+    openInicioSession(){
+        this.props.history.push("/SignIn");
+    }
+    openRegistrarse(){
+        this.props.history.push("/SignUp")
+    }
+
     render() {
         return (
             <>
                 <header className="header">
-                    <div className="logo-container animate__animated animate__bounce">
-                        <div className="animate__animated animate__backInLeft"> <img src="../imgs/icon.png" alt="" width="60px" height="60px"/></div>
-                        <h2>HappyLife</h2>
-                    </div>
+                   <Logo/>
                     <nav>
                         <ul className="nav-items">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Acerca de Nosotros</a></li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/aboutUs">Acerca de Nosotros</a></li>
                             <li><a href="#">Equipo</a></li>
                             <li><a href="#">Servicio</a></li>
                         </ul>
                     </nav>
                     <div className="contenedor-botones">
-                        <button className="boton-Iniciar-session">Iniciar Sesion</button>
-                        <button className="boton-Iniciar-session">Registrarse</button>
+                        <button className="boton-Iniciar-session" onClick={this.openInicioSession.bind(this)}>Iniciar Sesion</button>
+                        <button className="boton-Iniciar-session" onClick={this.openRegistrarse.bind(this)}>Registrarse</button>
                     </div>
                 </header>
             </>
@@ -29,4 +33,4 @@ class NavagationBar extends React.Component{
     }
 }
 
-export default NavagationBar;
+export default withRouter(NavagationBar);

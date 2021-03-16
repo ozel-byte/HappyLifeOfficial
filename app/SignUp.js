@@ -36,7 +36,9 @@ class SignUp extends React.Component{
                 <div className="row justify-content-center">
                     <div className="col-5 border min-vh-100">
                         <br/>
-                        <h1>Crear Cuenta</h1>
+                       <div>
+                           <h1>Crear Cuenta</h1>
+                       </div>
                         <Input label="Nombre" type="text" name="nombre" placeholder="ingrese su Nombre" valor={this.state.nombre} onChange={this.handleChange}/>
                         <Input label="Nombre Usuario" type="text" name="nombreUsuario" placeholder="ingrese su Nombre de Usuario" valor={this.state.nombreUsuario} onChange={this.handleChange}/>
                         <Input label="Email" type="text" name="email" placeholder="ingrese su email" valor={this.state.email} onChange={this.handleChange}/>

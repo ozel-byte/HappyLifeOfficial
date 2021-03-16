@@ -10,7 +10,8 @@ class FormSignUp extends React.Component{
         super();
         this.state = {
             fecha: new Date(),
-            terminos : false
+            terminos : false,
+            imgUpload: ''
         }
     }
     onChange(e){
@@ -18,9 +19,9 @@ class FormSignUp extends React.Component{
            fecha:e
        })
     }
-
     registrarUser(){
         if(this.props.nombre.length > 0 && this.props.nombreUsuario.length > 0 && this.props.email.length > 0 && this.props.contrasena.length > 0){
+
             axios.post('http://localhost:3000/user/signup',{
                 nombre:this.props.nombre.toString(),
                 correo: this.props.email.toString(),
@@ -41,6 +42,23 @@ class FormSignUp extends React.Component{
         }
     }
 
+    uploadImg(files){
+        const formData = new FormData();
+        formData.append("file", files[0]);
+        formData.append('upload_preset', 'rhvqjres');
+        this.setState({
+            imgUpload: formData
+        })
+    };
+
+    subir(){
+        axios.post("https://api.cloudinary.com/v1_1/dv5fwf13g/image/upload", this.state.imgUpload).then((resp) => {
+            console.log(resp.data.url);
+        }).catch((err) => {
+            console.log(err)
+        });
+    }
+
     render() {
         return(
             <div>
@@ -52,6 +70,12 @@ class FormSignUp extends React.Component{
                        </div>
 
                     </div>
+                <div>
+                    <input type="file" onChange={(e) => {
+                            this.uploadImg(e.target.files);
+                    }}/>
+                    <button className="btn btn-success" onClick={this.subir.bind(this)}>upload img</button>
+                </div>
                 <br/>
                 <button className="button-Register" onClick={this.registrarUser.bind(this)}>Registrarse</button>
             </div>

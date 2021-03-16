@@ -146,6 +146,40 @@ display: flex;flex-direction: column;
     width: 80%;
     height: auto;
 }
+
+.contenedor-publicacion2{
+    border: 4px dashed;
+    border-left-color: white;
+    border-right-color: white;
+    border-top-color: white;
+    border-bottom-color: #dedede;
+    margin:auto;
+    width: 60%;
+    height: 525px;
+    align-items: center;
+    justify-content: center;
+    display: flex;flex-direction: column;
+}
+
+.contenedor-publicacion3{
+    border: 4px dashed;
+    border-left-color: white;
+    border-right-color: white;
+    border-top-color: white;
+    border-bottom-color: #dedede;
+    margin:auto;
+    width: 60%;
+    height: 425px;
+    align-items: center;
+    justify-content: center;
+    display: flex;flex-direction: column;
+}
+
+.misRecuerdos{
+    margin: auto;
+    margin-top: 40px;
+}
+
 .contenedor-item-publicacion label{
   padding-left: 50px;
 }
@@ -155,35 +189,47 @@ display: flex;flex-direction: column;
 }
 /* About us */
 
-.quienesSomos{
-    padding-top: 15px;
-    margin-left: 3%;
+.txtEspecializados{
+    color: #9A00FF;
 }
 
 .textP{
-    padding-top: 8%;
-    margin-left: 5%;
+    margin-left: 14%;
+    position: relative;
+}
+
+.textS{
+    margin-left: 45%;
+    position: relative;
 }
 
 .imagen1{
-    margin-top: -27%;
-    margin-left: 70%;
+    margin-top: -18%;
+    margin-left: 25%;
 }
 
 .imagen2{
-    margin-top: -1%;
-    padding-left: 1100px;
+    margin-top: -18%;
+    margin-left: 14%;
 }
 
-.imagen3{
-    margin-top: -35%;
-    margin-left: 50%;
+.txtQuienesSomos{
+    color: #F6960B;
+}
+
+.txtTrastornos{
+    color: #6501FB;
 }
 
 .textoM{
     color: #8540F5;
     margin-left: 5%;
 }
+
+.textoFomentar{
+    color: #7500CB;
+}
+
 
 
 /* Estilos para el NavBar */
@@ -316,3 +362,44 @@ footer{
 .direccion-footer{
     text-align: center;
 }
+
+.contenedor-form{
+    width: 400px;
+    margin: auto;
+}
+.fondo-img{
+    background-color: #afe5ba;
+}
+.fondo-secion1{
+    background-color: #ffffff;
+}
+
+/* kevin codigo css */
+.contenedor-publicacion2{
+    border: 4px dashed;
+    border-left-color: white;
+    border-right-color: white;
+    border-top-color: white;
+    border-bottom-color: #dedede;
+    margin:auto;
+    width: 60%;
+    height: 525px;
+    align-items: center;
+    justify-content: center;
+    display: flex;flex-direction: column;
+}
+
+.contenedor-publicacion3{
+    border: 4px dashed;
+    border-left-color: white;
+    border-right-color: white;
+    border-top-color: white;
+    border-bottom-color: #dedede;
+    margin:auto;
+    width: 60%;
+    height: 425px;
+    align-items: center;
+    justify-content: center;
+    display: flex;flex-direction: column;
+}
+

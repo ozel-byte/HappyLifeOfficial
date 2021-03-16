@@ -17,6 +17,7 @@ class SignIn extends React.Component{
         this.onChange = this.onChange.bind(this);
     }
 
+
     onChange(e){
         let field = e.target.name;
         let value = e.target.value;
@@ -25,7 +26,6 @@ class SignIn extends React.Component{
             [field] : {$set : value}
         }))
 
-        console.log(value+ " "+ field);
     }
 
     render() {
@@ -40,7 +40,7 @@ class SignIn extends React.Component{
 
                        <div className="text-right">
 
-                           <p className="logo"> <img src="../imgs/IMG_20210201_170350.png" alt="" className="pb-3" width="50px"/>HappyLife</p>
+                           <p className="logo"> <img src="../imgs/icon.png" alt="" className="pb-3" width="50px"/>HappyLife</p>
 
                        </div>
                         <h1>Inicio de sesion</h1>
